@@ -1,6 +1,6 @@
 // Cucumber Test
 
-Feature : Search for Ducks
+Feature : Google Search
 
 Scenario :  Enter Ducks in to google search box and verify the searchresult
 
