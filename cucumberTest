@@ -1,0 +1,10 @@
+// Cucumber Test
+
+Feature : Search for Ducks
+
+Scenario :  Enter Ducks in to google search box and verify the searchresult
+
+Given : Go to www.google.com 
+When: Enter 'Ducks' in to google search box and Search
+
+Then: Verify that search is successful. Verify that ducks result list shows up.
