@@ -23,19 +23,25 @@ public class stepDefinition {
 	@When ("^Enter 'Ducks' in to google search box and Search$")
 	public void search(String searchWord){
 		
-		By searchBox = By.name("q");
+	    By searchBox = By.name("q");
 		
-		dr.findElement(searchBox).sendKeys(searchWord);
+	    dr.findElement(searchBox).sendKeys(searchWord);
 	    dr.findElement(searchBox).sendKeys(Keys.RETURN);
+            Thread.sleep(3000);
+	
 	}
 	       
 	       
 	@Then("^Verify that search is successful$")
 	public void verifySuccessful(){
+       //Locator for Wikipedia text link field
+	    By resultElement = By.xpath("//span[contains(text(),'Duck - Wikipedia')]");
 		
-      System.out.println("Wikipedia Page title is : " + dr.getTitle());
+	    dr.findElement(resultElement).click();		
+		
+            System.out.println("Wikipedia Page title is : " + dr.getTitle());
     	
-    	String actualText = dr.getTitle();
+    	    String actualText = dr.getTitle();
 	    String expectedText = "Duck - Wikipedia";
    
 	   Assert.assertTrue("Login not successful",expectedText.equals(actualText));
