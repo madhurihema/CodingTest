@@ -44,7 +44,7 @@ public class stepDefinition {
     	    String actualText = dr.getTitle();
 	    String expectedText = "Duck - Wikipedia";
    
-	   Assert.assertTrue("Login not successful",expectedText.equals(actualText));
+	   Assert.assertTrue("Verify search not successful",expectedText.equals(actualText));
 	}
 
 }
